@@ -88,7 +88,7 @@ structure through headings quotes, and other features,
 
 - Links: [text](https://example.com)
 
-- Images: ![alt text](formatted-text.png)
+- Images: ![alt text](images/formatted-text.png)
 
 ## Exercise (2 of 4)
 
@@ -126,15 +126,23 @@ open science
 A code chunk is introduced with three backticks, followed by {r}, and
 then closed with three backticks. For example:
 
-``` r
-2 + 2
-```
+```` markdown
+``` {r demo}
 
-    ## [1] 4
+2 + 2
+
+```
+````
+
+You can type this out manually in your `.Rmd` file, or you can create a
+new code black by clicking on the <img src='images/embed.png'> button.
 
 You can give a chunk a name immediately after the r. In the example
 above **demo** is the name. Naming code chunks is optional but can be
-helpful for cross-referencing and debugging.
+helpful for cross-referencing and debugging. You might notice that I am
+being a bit lazy and haven’t named my code chunks in this document.
+That’s not the end of the world because it is a relative short doc, but
+if you were doing a detailed, sophisticated analysis it is a good idea.
 
 If you look at the rendered version of this document you will see that
 by default both the R code and the output of the code are printed.
@@ -144,7 +152,8 @@ want to suppress that. Similarly, if the output is messy we might want
 to exclude that.
 
 Code chunk options are used to control what is displayed. For example,
-we could set `echo=FALSE` to hide the R code, as follows:
+we could set `echo=FALSE` to hide the R code, and just return the
+result:
 
     ## [1] 4
 
@@ -208,7 +217,7 @@ ggplot(
     ## Warning: Removed 2 rows containing non-finite outside the scale range
     ## (`stat_density()`).
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -243,7 +252,7 @@ p1 <- ggplot(
 p1
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ### A boxplot (1 numeric variable)
 
@@ -256,7 +265,7 @@ p2 <- ggplot(
 p2
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ### A bar plot (1 categorical variable)
 
@@ -276,7 +285,7 @@ p3 <- ggplot(
 p3
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ## Bivariate plots
 
@@ -291,7 +300,7 @@ p4 <- ggplot(
 p4
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ### A grouped boxplot (1 numeric and 1 categorical variable)
 
@@ -304,7 +313,7 @@ p5 <- ggplot(
 p5
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ### A scatterplot (2 numeric variables)
 
@@ -317,7 +326,7 @@ p6 <- ggplot(
 p6
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ## Multivariate plots
 
@@ -332,7 +341,7 @@ p7 <- ggplot(
 p7
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### A facetted scatter plot (2 numeric variables and 1 categorical variable)
 
@@ -346,7 +355,7 @@ p8 <- ggplot(
 p8
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ## Combining plots
 
@@ -356,7 +365,7 @@ library(ggpubr)
 ggarrange(p1, p2, p3, p4, labels = 'AUTO')
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ## Labels
 
@@ -386,12 +395,12 @@ p9 <- ggplot(
 p9
 ```
 
-![](r4hds_exercise_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](r4hds_exercise_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ## Exercise (4 of 4)
 
 Drawing off the examples above, can you recreate the chart shown here?
 
-![](vis-exercise.png)
+![](images/vis-exercise.png)
 
 ------------------------------------------------------------------------

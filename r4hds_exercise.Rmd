@@ -83,7 +83,7 @@ Markdown provides a simple syntax that allows us to format text, add structure t
 
 * Links: [text](https://example.com)
 
-* Images: ![alt text](formatted-text.png)
+* Images: ![alt text](images/formatted-text.png)
 
 
 ## Exercise (2 of 4)
@@ -116,19 +116,23 @@ Greater transparency through open science
 
 A code chunk is introduced with three backticks, followed by {r}, and then closed with three backticks. For example:
 
+```` {markdown}
 ``` {r demo}
 
 2 + 2
 
 ```
+````
 
-You can give a chunk a name immediately after the r. In the example above **demo** is the name. Naming code chunks is optional but can be helpful for cross-referencing and debugging. 
+You can type this out manually in your `.Rmd` file, or you can create a new code black by clicking on the <span><img src='images/embed.png'></span> button.
+
+You can give a chunk a name immediately after the r. In the example above **demo** is the name. Naming code chunks is optional but can be helpful for cross-referencing and debugging. You might notice that I am being a bit lazy and haven't named my code chunks in this document. That's not the end of the world because it is a relative short doc, but if you were doing a detailed, sophisticated analysis it is a good idea. 
 
 If you look at the rendered version of this document you will see that by default both the R code and the output of the code are printed. Sometimes we want to show the code and the outcome but not always. If the code is long, and not particularly relevant to the reader, we might want to suppress that. Similarly, if the output is messy we might want to exclude that.
 
 
 
-Code chunk options are used to control what is displayed. For example, we could set `echo=FALSE` to hide the R code, as follows:
+Code chunk options are used to control what is displayed. For example, we could set `echo=FALSE` to hide the R code, and just return the result:
 
 ``` {r, echo=FALSE}
 
@@ -359,7 +363,7 @@ p9
 
 Drawing off the examples above, can you recreate the chart shown here? 
 
-![](vis-exercise.png)
+![](images/vis-exercise.png)
 
 ***
 
